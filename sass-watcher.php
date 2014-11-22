@@ -3,7 +3,7 @@
  * Plugin Name: Sass Watcher
  * Plugin URI: https://github.com/reyhoun/sass-watcher
  * Description: A PHP Sass compiler that compatible with ACF 5 plugin and use SCSSPHP to compile Sass Codes
- * Version: 1.3.1
+ * Version: 1.4.0
  * Author: Reyhoun
  * Author URI: http://reyhoun.com/
  * License: GPLv2 or later
