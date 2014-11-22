@@ -17,7 +17,7 @@ class sass_watcher
 {
 	public function writedata($data)
 	{
-		$file = plugin_dir_path( __FILE__ ) . 'metadata/data.txt';
+		$file = get_template_directory() . '/sass-watcher-config.txt';
 		$td = '';
 		foreach ($data as $key => $value) {
 			$td .= $key . '=' . $value . '\n';
@@ -27,7 +27,7 @@ class sass_watcher
 
 	public function getdata()
 	{
-		$file = plugin_dir_path( __FILE__ ) . 'metadata/data.txt';
+		$file = get_template_directory() . '/sass-watcher-config.txt';
 		$data = file_get_contents($file);
 		$darr = explode('\n', $data);
 		$gd = array();
