@@ -3,12 +3,12 @@
  * Plugin Name: Sass Watcher
  * Plugin URI: https://github.com/reyhoun/sass-watcher
  * Description: A PHP Sass compiler that compatible with ACF 5 plugin and use SCSSPHP to compile Sass Codes
- * Version: 1.4.0
+ * Version: 1.5.0
  * Author: Reyhoun
  * Author URI: http://reyhoun.com/
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * GitHub Plugin URI: https://github.com/reyhoun/acf-typography
+ * GitHub Plugin URI: https://github.com/reyhoun/sass-watcher
  * Contributors: Mohammad Mojrian(mohammadmojrian@gmail.com), Parhum Khoshbakht(parhum.kh@gmail.com)
 */
 
@@ -234,7 +234,8 @@ function typography_field_validate($var, $value, $name) {
     	'font_size'		=> 'null',
     	'line_height' 	=> 'null',
     	'font_style' 	=> 'normal',
-    	'text-color' 	=> 'null'
+    	'text-color' 	=> 'null',
+    	'letter_spacing' => '0'
     );
 
     $value = array_merge($default_value, $value);
