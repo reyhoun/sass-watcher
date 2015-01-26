@@ -107,16 +107,16 @@ function adminPageContant()
 	echo '<h2> ' . __( 'Initial Settings', 'sass-watcher' ) . '</h2>';
 
 	echo '<p><strong>' . __( 'SCSS Directory Path:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/<input type="text" name="sasswatcher_sassdir" value="' . $conf['sassdir'] . '" size="20">';
+	echo '<code>' . get_template_directory() . '/</code><input type="text" name="sasswatcher_sassdir" value="' . $conf['sassdir'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'Final SCSS file to compile:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/[SCSS Directory Path]/<input type="text" name="sasswatcher_sassfile" value="' . $conf['sassfile'] . '" size="20">';
+	echo '<code>' . get_template_directory() . '/[SCSS Directory Path]/</code><input type="text" name="sasswatcher_sassfile" value="' . $conf['sassfile'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'File for save variables sent from ACF:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/[SCSS Directory Path]/<input type="text" name="sasswatcher_varfilename" value="' . $conf['varfilename'] . '" size="20">';
+	echo '<code>' . get_template_directory() . '/[SCSS Directory Path]/</code><input type="text" name="sasswatcher_varfilename" value="' . $conf['varfilename'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'CSS output file:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/<input type="text" name="sasswatcher_cssdir" value="' . $conf['cssdir'] . '" size="20">';
+	echo '<code>' . get_template_directory() . '/</code><input type="text" name="sasswatcher_cssdir" value="' . $conf['cssdir'] . '" size="20">';
 
 
 	echo '<br /><br /><h3> ' . __( 'Developer Option', 'sass-watcher' ) . '</h3>';
