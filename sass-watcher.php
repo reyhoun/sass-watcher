@@ -73,9 +73,9 @@ function adminPageContant()
 	if (isset($_POST['sasswatcher_hidden']) && $_POST['sasswatcher_hidden'] == 'true') {
 		if (isset($_POST['sasswatcher_compile']) && $_POST['sasswatcher_compile'] == 'true') {
 			$conf = $sw->getdata();
-			$scss_forlder = get_template_directory() . $conf['sassdir'];
+			$scss_forlder = get_template_directory() . '/' . $conf['sassdir'];
 			$scss_filename = $scss_forlder . '/' . $conf['sassfile'];
-			$scss_style = get_template_directory() . $conf['cssdir'];
+			$scss_style = get_template_directory() . '/' . $conf['cssdir'];
 			$sw->compile($scss_forlder,$scss_filename,$scss_style);
 		} else {
 		    $data = array();
@@ -96,7 +96,7 @@ function adminPageContant()
 
 
 	echo '<div class="wrap">';
-	echo "<h1>" . __( 'Sass Watcher Config Page', 'sass-watcher' ) . "</h1>";
+	echo "<h1>" . __( 'Sass Watcher Config', 'sass-watcher' ) . "</h1>";
 
 
     if(isset($tf) && $tf == true)
@@ -107,16 +107,16 @@ function adminPageContant()
 	echo '<h2> ' . __( 'Initial Settings', 'sass-watcher' ) . '</h2>';
 
 	echo '<p><strong>' . __( 'SCSS Directory Path:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '<input type="text" name="sasswatcher_sassdir" value="' . $conf['sassdir'] . '" size="20">';
+	echo get_template_directory() . '/<input type="text" name="sasswatcher_sassdir" value="' . $conf['sassdir'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'Final SCSS file to compile:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/<input type="text" name="sasswatcher_sassfile" value="' . $conf['sassfile'] . '" size="20">';
+	echo get_template_directory() . '/[SCSS Directory Path]/<input type="text" name="sasswatcher_sassfile" value="' . $conf['sassfile'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'File for save variables sent from ACF:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '/<input type="text" name="sasswatcher_varfilename" value="' . $conf['varfilename'] . '" size="20">';
+	echo get_template_directory() . '/[SCSS Directory Path]/<input type="text" name="sasswatcher_varfilename" value="' . $conf['varfilename'] . '" size="20">';
 
 	echo '<p><strong>' . __( 'CSS output file:', 'sass-watcher' ) . '</strong> <span style="color:red;">*</span></p>';
-	echo get_template_directory() . '<input type="text" name="sasswatcher_cssdir" value="' . $conf['cssdir'] . '" size="20">';
+	echo get_template_directory() . '/<input type="text" name="sasswatcher_cssdir" value="' . $conf['cssdir'] . '" size="20">';
 
 
 	echo '<br /><br /><h3> ' . __( 'Developer Option', 'sass-watcher' ) . '</h3>';
@@ -155,9 +155,9 @@ function checkdevmode()
 	$sw = new sass_watcher;
 	$conf = $sw->getdata();
 	if ($conf['devmode'] == '1') {
-		$scss_forlder = get_template_directory() . $conf['sassdir'];
+		$scss_forlder = get_template_directory() . '/' . $conf['sassdir'];
 		$scss_filename = $scss_forlder . '/' . $conf['sassfile'];
-		$scss_style = get_template_directory() . $conf['cssdir'];
+		$scss_style = get_template_directory() . '/' . $conf['cssdir'];
 		$sw->compile($scss_forlder,$scss_filename,$scss_style);
 	}
 }
@@ -380,9 +380,9 @@ function watcher_acf_save_post($post_id)
 
 		$sw = new sass_watcher;
 		$conf = $sw->getdata();
-		$scss_forlder = get_template_directory() . $conf['sassdir'];
+		$scss_forlder = get_template_directory() . '/' . $conf['sassdir'];
 		$scss_filename = $scss_forlder . '/' . $conf['sassfile'];
-		$scss_style = get_template_directory() . $conf['cssdir'];
+		$scss_style = get_template_directory() . '/' . $conf['cssdir'];
 		$varfilename = $scss_forlder . '/' . $conf['varfilename'];
 		file_put_contents($varfilename,$var);
 		$sw->compile($scss_forlder,$scss_filename,$scss_style);
