@@ -2,8 +2,8 @@
 /*
  * Plugin Name: Sass Watcher
  * Plugin URI: https://github.com/reyhoun/sass-watcher
- * Description: A PHP Sass compiler that compatible with ACF 5 plugin and use SCSSPHP to compile Sass Codes
- * Version: 1.6.1
+ * Description: It's PHP SCSS Compiler for WordPress and it's compatible with Advanced Custom Field 5 to send parameters(variables) to your SCSS codes.
+ * Version: 1.6.0
  * Author: Reyhoun
  * Author URI: http://reyhoun.com/
  * License: GPLv2 or later
