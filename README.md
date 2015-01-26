@@ -24,6 +24,7 @@ Features
 Getting Started
 ------------------
 
+- **Important:** Create an empty file in root of your theme with **sass-watcher-config.txt** name.
 - Download and Install Sass Watcher plugin(same as all WordPress plugins)
 - Open WordPress dashboard and navigate to `Appearance > Sass Watcher`
 - All **Initial Settings** are required. Complete all of them before continue.
