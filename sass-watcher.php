@@ -43,12 +43,19 @@ class sass_watcher
 	}
 
 
-	public function compile($scss_folder, $scss_filename,$stylename,$format_style = "scss_formatter")
+	public function compile($scss_folder, $scss_filename, $stylename, $format_style = null)
 	{
 		require_once plugin_dir_path( __FILE__ ) . 'lib/scssphp/scss.inc.php';
-		$scss_compiler = new scssc();
+		
+		if(is_null($format_style))
+		{
+			$format_style = new Leafo\ScssPhp\Formatter\Crunched();
+		}
+		
+		$scss_compiler = new Leafo\ScssPhp\Compiler();
 		$scss_compiler->setImportPaths($scss_folder);
 		$scss_compiler->setFormatter($format_style);
+
 		try {
 			$file = $scss_filename;
 			$content = file_get_contents($file);
